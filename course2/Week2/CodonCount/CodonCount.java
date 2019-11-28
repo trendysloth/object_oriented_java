@@ -49,24 +49,24 @@ public class CodonCount {
         for(String s : resource.words()){
             s = s.trim();
             System.out.println(s);
-            buildCodonMap(0, s);
-            System.out.println("\nReading frame starting with 0 results in " + map.size() + " unique codons");
-            String mostCommonCodon = getMostCommonCodon();
-            System.out.println("most common codon is " + mostCommonCodon + " with count " + map.get(mostCommonCodon));
-            System.out.println("Counts of codons between 1 and 5 inclusive are: ");
-            printCodonCounts(1, 5);
-            buildCodonMap(1, s);
-            System.out.println("\nReading frame starting with 1 results in " + map.size() + " unique codons");
-            mostCommonCodon = getMostCommonCodon();
-            System.out.println("most common codon is " + mostCommonCodon + " with count " + map.get(mostCommonCodon));
-            System.out.println("Counts of codons between 1 and 5 inclusive are: ");
-            printCodonCounts(1, 5);
             buildCodonMap(2, s);
             System.out.println("\nReading frame starting with 2 results in " + map.size() + " unique codons");
-            mostCommonCodon = getMostCommonCodon();
+            String mostCommonCodon = getMostCommonCodon();
             System.out.println("most common codon is " + mostCommonCodon + " with count " + map.get(mostCommonCodon));
-            System.out.println("Counts of codons between 1 and 5 inclusive are: ");
-            printCodonCounts(1, 5);
+            System.out.println("Counts of codons between 7 and 7 inclusive are: ");
+            printCodonCounts(7, 7);
+            //buildCodonMap(1, s);
+            //System.out.println("\nReading frame starting with 1 results in " + map.size() + " unique codons");
+            //mostCommonCodon = getMostCommonCodon();
+            //System.out.println("most common codon is " + mostCommonCodon + " with count " + map.get(mostCommonCodon));
+            //System.out.println("Counts of codons between 1 and 5 inclusive are: ");
+            //printCodonCounts(6, 6);
+            //buildCodonMap(2, s);
+            //System.out.println("\nReading frame starting with 2 results in " + map.size() + " unique codons");
+            //mostCommonCodon = getMostCommonCodon();
+            //System.out.println("most common codon is " + mostCommonCodon + " with count " + map.get(mostCommonCodon));
+            //System.out.println("Counts of codons between 1 and 5 inclusive are: ");
+            //printCodonCounts(1, 5);
         }
     }
 }

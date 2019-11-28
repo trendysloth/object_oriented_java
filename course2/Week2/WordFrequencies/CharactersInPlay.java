@@ -15,7 +15,7 @@ public class CharactersInPlay {
     }
     private void update(String person) {
         person = person.toLowerCase();
-        person = person.replaceAll("\\s", "");
+        person = person.trim();
         int indexOfPerson = characterNames.indexOf(person);
         if (indexOfPerson == -1){
             characterNames.add(person);
@@ -62,7 +62,7 @@ public class CharactersInPlay {
         //for (int i = 0; i < characterNames.size(); i ++) {
         //    System.out.println(characterNames.get(i) + ": " + counts.get(i));
         //}
-        charactersWithNumParts(10, 15);
+        charactersWithNumParts(50, 103);
         int maxIndex = findMaxIndex();
         System.out.println("name that appeared the most is " + characterNames.get(maxIndex) + ": " + counts.get(maxIndex));
     }
